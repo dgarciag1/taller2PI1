@@ -8,9 +8,9 @@ def luminosity(request):
             if value:
 
                 args = {'type': 'lux', 'value': value}
-                response = requests.post('http://127.0.0.1:8000/luminositys/', args)
+                response = requests.post('http://pi1-eafit-dgarciag.azurewebsites.net/luminositys/', args)
                 luminosity_json = response.json()
 
-    response = requests.get('http://127.0.0.1:8000/luminositys/')
+    response = requests.get('http://pi1-eafit-dgarciag.azurewebsites.net/luminositys/')
     luminositys = response.json()
     return render(request, "luminosity.html", {'luminositys': luminositys})
