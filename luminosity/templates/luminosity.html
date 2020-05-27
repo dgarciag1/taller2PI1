@@ -7,13 +7,10 @@
     </form>
     {% for luminosity in luminositys %}
     <ul class="list-group">
+        <li class="list-group-item">{{luminosity.type}} = {{luminosity.value}}</li>
     </ul>
     {% endfor %}
-    <ul class="list-group">
-        <li class="list-group-item">ph = 2</li>
-        <li class="list-group-item">ph = 3</li>
-        <li class="list-group-item">ph = 1</li>
-        <li class="list-group-item">ph = 5</li>
-    </ul>
 </div>
 {% endblock %}
+
+
